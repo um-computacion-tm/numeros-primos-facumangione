@@ -1,13 +1,6 @@
 import unittest
+from numeros_primos import is_prime
 
-def is_prime(value):
-    divisor=value-1
-    while divisor>1:
-        if value%divisor==0:
-            return False
-        divisor=divisor-1
-    return True
-    
 
 class TestIsPrime(unittest.TestCase):
     def test_with_1(self):
@@ -30,4 +23,5 @@ class TestIsPrime(unittest.TestCase):
         result = is_prime(5)
         self.assertTrue(result)
 
-unittest.main()
+if __name__ == '__main__':
+    unittest.main()
